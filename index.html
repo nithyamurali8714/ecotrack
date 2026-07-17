@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoTrack — Small habits. Big planet.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="EcoTrack home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        EcoTrack
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Menu</span>
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#" class="btn btn-primary">Get started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Habit tracking, grounded in outcomes</p>
+        <h1>Small habits.<br>Big planet.</h1>
+        <p class="hero-lead">EcoTrack turns everyday choices — the bus instead of the ride, the refill instead of the bottle — into a streak worth keeping.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">Start tracking free</a>
+          <a href="#dashboard" class="btn btn-ghost">See how it works</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>Active trackers</dt><dd>42,000+</dd></div>
+          <div><dt>CO₂ logged</dt><dd>1.2M kg</dd></div>
+          <div><dt>Avg. streak</dt><dd>23 days</dd></div>
+        </dl>
+      </div>
+      <div class="hero-visual" role="img" aria-label="Preview of the EcoTrack weekly habit grid">
+        <div class="grid-preview">
+          <div class="gp-header">This week</div>
+          <div class="gp-cell done">Mon</div>
+          <div class="gp-cell done">Tue</div>
+          <div class="gp-cell done">Wed</div>
+          <div class="gp-cell">Thu</div>
+          <div class="gp-cell">Fri</div>
+          <div class="gp-cell">Sat</div>
+          <div class="gp-cell">Sun</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+      <h2>Built around three real habits</h2>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">🚲</span>
+          <h3>Move without a car</h3>
+          <p>Log walks, rides, and transit trips. See the emissions you skipped, not just the miles you covered.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">💧</span>
+          <h3>Cut single-use waste</h3>
+          <p>Track refills, reusables, and repairs. Small swaps add up faster than most people expect.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">🌱</span>
+          <h3>Eat closer to the source</h3>
+          <p>Note plant-forward meals and local produce. No guilt, just a running count.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- DASHBOARD (macro grid layout demo) -->
+    <section id="dashboard" class="dashboard">
+      <h2>Your week, at a glance</h2>
+      <div class="dash-layout">
+        <aside class="dash-sidebar" aria-label="Habit categories">
+          <h3>Categories</h3>
+          <ul class="category-list">
+            <li><a href="#" class="active">All habits</a></li>
+            <li><a href="#">Transport</a></li>
+            <li><a href="#">Waste</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Energy</a></li>
+          </ul>
+        </aside>
+
+        <div class="dash-main">
+          <div class="dash-toolbar">
+            <div class="dash-toolbar-group">
+              <button class="btn btn-small btn-ghost">This week</button>
+              <button class="btn btn-small btn-ghost">This month</button>
+            </div>
+            <button class="btn btn-small btn-primary">Log a habit</button>
+          </div>
+
+          <ul class="habit-list">
+            <li class="habit-row">
+              <span class="habit-name">Cycled to college</span>
+              <span class="habit-tag transport">Transport</span>
+              <span class="habit-value">−1.8 kg CO₂</span>
+            </li>
+            <li class="habit-row">
+              <span class="habit-name">Refilled water bottle</span>
+              <span class="habit-tag waste">Waste</span>
+              <span class="habit-value">−0.1 kg CO₂</span>
+            </li>
+            <li class="habit-row">
+              <span class="habit-name">Home-cooked lunch</span>
+              <span class="habit-tag food">Food</span>
+              <span class="habit-value">−0.6 kg CO₂</span>
+            </li>
+            <li class="habit-row">
+              <span class="habit-name">Air-dried laundry</span>
+              <span class="habit-tag energy">Energy</span>
+              <span class="habit-value">−0.4 kg CO₂</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT / TESTIMONIAL -->
+    <section id="impact" class="impact">
+      <blockquote>
+        <p>“I stopped tracking calories and started tracking commutes. Three months in, I've skipped forty car rides — and I actually look forward to logging them.”</p>
+        <footer>— Early user, Kochi</footer>
+      </blockquote>
+      <a href="#" class="btn btn-primary">Start your streak</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <p>EcoTrack</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#impact">Impact</a></li>
+        </ul>
+      </nav>
+      <p class="footer-note">Built as a DecodeLabs Project 1 submission — responsive frontend interface.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
