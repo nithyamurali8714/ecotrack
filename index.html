@@ -109,10 +109,10 @@
               <button class="btn btn-small btn-ghost">This week</button>
               <button class="btn btn-small btn-ghost">This month</button>
             </div>
-            <button class="btn btn-small btn-primary">Log a habit</button>
+            <button class="btn btn-small btn-primary" id="log-habit-btn" aria-haspopup="dialog">Log a habit</button>
           </div>
 
-          <ul class="habit-list">
+          <ul class="habit-list" id="habit-list">
             <li class="habit-row">
               <span class="habit-name">Cycled to college</span>
               <span class="habit-tag transport">Transport</span>
@@ -137,6 +137,32 @@
         </div>
       </div>
     </section>
+
+    <!-- LOG A HABIT — modal dialog -->
+    <dialog id="log-habit-modal" class="habit-modal" aria-labelledby="log-habit-title">
+      <form method="dialog" id="log-habit-form" class="habit-form">
+        <h3 id="log-habit-title">Log a habit</h3>
+
+        <label for="habit-name-input">What did you do?</label>
+        <input type="text" id="habit-name-input" name="habitName" placeholder="e.g. Walked to the shop" required>
+
+        <label for="habit-category-input">Category</label>
+        <select id="habit-category-input" name="habitCategory">
+          <option value="transport">Transport</option>
+          <option value="waste">Waste</option>
+          <option value="food">Food</option>
+          <option value="energy">Energy</option>
+        </select>
+
+        <label for="habit-value-input">Estimated CO₂ saved (kg)</label>
+        <input type="number" id="habit-value-input" name="habitValue" step="0.1" min="0" value="0.5" required>
+
+        <div class="habit-form-actions">
+          <button type="button" class="btn btn-ghost btn-small" id="log-habit-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-small">Add habit</button>
+        </div>
+      </form>
+    </dialog>
 
     <!-- IMPACT / TESTIMONIAL -->
     <section id="impact" class="impact">

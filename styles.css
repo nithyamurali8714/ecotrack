@@ -219,7 +219,6 @@ h3 { font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem); font-weight: 600; }
 }
 .feature-icon { font-size: 1.8rem; display: block; margin-bottom: var(--space-1); }
 .feature-card p { color: var(--clr-ink-soft); margin: 0.5em 0 0; }
-
 /* =========================================================
    DASHBOARD — CSS Grid macro layout
    ========================================================= */
@@ -283,6 +282,47 @@ h3 { font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem); font-weight: 600; }
 @container dash-main (max-width: 420px) {
   .habit-row { flex-direction: column; align-items: flex-start; }
   .habit-value { margin-left: 0; }
+}
+
+/* =========================================================
+   LOG A HABIT — MODAL DIALOG
+   ========================================================= */
+.habit-modal {
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  width: min(90vw, 420px);
+  box-shadow: 0 30px 60px -20px rgba(46, 42, 37, 0.35);
+}
+.habit-modal::backdrop {
+  background: rgba(46, 42, 37, 0.5);
+  backdrop-filter: blur(2px);
+}
+.habit-form { display: flex; flex-direction: column; gap: var(--space-1); }
+.habit-form h3 { margin-bottom: var(--space-1); }
+.habit-form label { font-weight: 600; font-size: 0.9rem; margin-top: var(--space-1); }
+.habit-form input,
+.habit-form select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.6em 0.8em;
+  border: 1px solid var(--clr-grey);
+  border-radius: var(--radius-sm);
+  background: var(--clr-bg);
+  color: var(--clr-ink);
+}
+.habit-form input:focus,
+.habit-form select:focus { border-color: var(--clr-mocha-dark); }
+.habit-form-actions {
+  display: flex; justify-content: flex-end; gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+/* Newly-added habit rows animate in so the interactivity is visible */
+.habit-row.is-new { animation: habit-in 0.35s ease; }
+@keyframes habit-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* =========================================================
